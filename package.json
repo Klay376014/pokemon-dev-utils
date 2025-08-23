@@ -33,10 +33,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/your-username/pokemon-dev-utils.git"
+    "url": "git+https://github.com/Klay376014/pokemon-dev-utils.git"
   },
-  "homepage": "https://github.com/your-username/pokemon-dev-utils#readme",
+  "homepage": "https://github.com/Klay376014/pokemon-dev-utils#readme",
   "bugs": {
-    "url": "https://github.com/your-username/pokemon-dev-utils/issues"
+    "url": "https://github.com/Klay376014/pokemon-dev-utils/issues"
   }
 }
