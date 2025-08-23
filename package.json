@@ -1,0 +1,42 @@
+{
+  "name": "pokemon-dev-utils",
+  "version": "1.0.0",
+  "description": "Pokemon utils for developers",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "pokemon-utils": "dist/cli.js"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "bun test",
+    "lint": "tsc --noEmit",
+    "prepublishOnly": "bun run build && bun test",
+    "parse": "bun run dist/cli.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "keywords": ["pokemon", "pokepaste", "utils", "parser", "showdown", "team"],
+  "author": "Your Name <your.email@example.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/your-username/pokemon-dev-utils.git"
+  },
+  "homepage": "https://github.com/your-username/pokemon-dev-utils#readme",
+  "bugs": {
+    "url": "https://github.com/your-username/pokemon-dev-utils/issues"
+  }
+}
