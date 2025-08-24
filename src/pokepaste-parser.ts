@@ -45,7 +45,7 @@ export async function parsePokepasteUrl(url: string): Promise<ParseResult> {
     return parsePokepasteText(data.paste, {
       title: data.title,
       author: data.author,
-      notes: data.notes,
+      format: data.notes,
       originalUrl: url
     });
   } catch (error) {
@@ -58,7 +58,7 @@ export async function parsePokepasteUrl(url: string): Promise<ParseResult> {
 
 export function parsePokepasteText(
   pasteText: string, 
-  metadata?: { title?: string; author?: string; notes?: string; originalUrl?: string }
+  metadata?: { title?: string; author?: string; format?: string; originalUrl?: string }
 ): ParseResult {
   try {
     const pokemonBlocks = pasteText
@@ -84,7 +84,7 @@ export function parsePokepasteText(
     const team: PokemonTeam = {
       title: metadata?.title,
       author: metadata?.author,
-      notes: metadata?.notes,
+      format: metadata?.format?.replace('Format: ', '') ?? '',
       pokemon,
       metadata: {
         source: 'pokepaste',

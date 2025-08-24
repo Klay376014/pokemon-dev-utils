@@ -36,7 +36,7 @@ export interface PokemonTeamMember {
 export interface PokemonTeam {
   title?: string;
   author?: string;
-  notes?: string;
+  format: string;
   pokemon: PokemonTeamMember[];
   metadata: {
     source: 'pokepaste';
